@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dGZ-8s-VNX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,16 +8,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="34v-P0-ioe">
+            <objects>
+                <viewController id="dGZ-8s-VNX" customClass="LoginViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIr-gJ-Obs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Go-nDH">
+                                <rect key="frame" x="60.666666666666657" y="638" width="249.99999999999997" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XWb-yz-LRk"/>
+                                    <constraint firstAttribute="width" constant="250" id="js7-wh-e9x"/>
+                                </constraints>
+                                <state key="normal" image="applesign"/>
+                                <connections>
+                                    <action selector="appleIdLoginAction:" destination="dGZ-8s-VNX" eventType="touchUpInside" id="djH-ZR-srN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-i0-s6j">
+                                <rect key="frame" x="55" y="702" width="265" height="30"/>
+                                <state key="normal" title="訪客登入"/>
+                                <connections>
+                                    <action selector="guestAction:" destination="dGZ-8s-VNX" eventType="touchUpInside" id="ZPg-iL-yGn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l19-vO-fqw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l19-vO-fqw" firstAttribute="trailing" secondItem="Tgv-i0-s6j" secondAttribute="trailing" constant="55" id="3OW-Zw-nHz"/>
+                            <constraint firstItem="B0S-Go-nDH" firstAttribute="centerX" secondItem="jIr-gJ-Obs" secondAttribute="centerX" constant="-2" id="8Hv-eN-ltx"/>
+                            <constraint firstItem="Tgv-i0-s6j" firstAttribute="leading" secondItem="l19-vO-fqw" secondAttribute="leading" constant="55" id="8IW-c3-UaT"/>
+                            <constraint firstItem="B0S-Go-nDH" firstAttribute="centerY" secondItem="jIr-gJ-Obs" secondAttribute="centerY" constant="254" id="92G-so-QfA"/>
+                            <constraint firstItem="Tgv-i0-s6j" firstAttribute="top" secondItem="B0S-Go-nDH" secondAttribute="bottom" constant="20" id="SKZ-DQ-cNK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleLoginButton" destination="B0S-Go-nDH" id="vsW-40-kbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ntb-Xw-Qpd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796.92307692307691" y="181.99052132701422"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5p-VN-3mZ">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,6 +84,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="applesign" width="848" height="152"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
