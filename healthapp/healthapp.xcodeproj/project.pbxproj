@@ -16,6 +16,7 @@
 		048C1B4026D5E96600250B01 /* healthappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B3F26D5E96600250B01 /* healthappUITests.swift */; };
 		048C1B4E26D5EA2900250B01 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 048C1B4D26D5EA2900250B01 /* .gitignore */; };
 		048C1B5126D5EA9E00250B01 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 048C1B5026D5EA9E00250B01 /* HealthKit.framework */; };
+		048C1B5626D87CD100250B01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 048C1B5526D87CD100250B01 /* GoogleService-Info.plist */; };
 		7F626D51FD7A77C60EF2A787 /* Pods_healthapp_healthappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2872C68126D0AAF75A874866 /* Pods_healthapp_healthappUITests.framework */; };
 		9CE4DC168285E93BC8D69C78 /* Pods_healthapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0762D0B13BD002A0B9A6630 /* Pods_healthapp.framework */; };
 		A696DA1B63D509D6ADC27BB1 /* Pods_healthappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA538B432C12B9F58F823E7E /* Pods_healthappTests.framework */; };
@@ -56,6 +57,7 @@
 		048C1B4F26D5EA9D00250B01 /* healthappRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = healthappRelease.entitlements; sourceTree = "<group>"; };
 		048C1B5026D5EA9E00250B01 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		048C1B5426D78F5F00250B01 /* healthappDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = healthappDebug.entitlements; sourceTree = "<group>"; };
+		048C1B5526D87CD100250B01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2872C68126D0AAF75A874866 /* Pods_healthapp_healthappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_healthapp_healthappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E5A433004AA4A41B4A863D /* Pods-healthapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-healthapp.debug.xcconfig"; path = "Target Support Files/Pods-healthapp/Pods-healthapp.debug.xcconfig"; sourceTree = "<group>"; };
 		AA538B432C12B9F58F823E7E /* Pods_healthappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_healthappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 		048C1B1C26D5E96200250B01 /* healthapp */ = {
 			isa = PBXGroup;
 			children = (
+				048C1B5526D87CD100250B01 /* GoogleService-Info.plist */,
 				048C1B5426D78F5F00250B01 /* healthappDebug.entitlements */,
 				048C1B4F26D5EA9D00250B01 /* healthappRelease.entitlements */,
 				048C1B1D26D5E96200250B01 /* AppDelegate.swift */,
@@ -187,6 +190,7 @@
 				048C1B1626D5E96200250B01 /* Sources */,
 				048C1B1726D5E96200250B01 /* Frameworks */,
 				048C1B1826D5E96200250B01 /* Resources */,
+				E66B529BE5C37064D36CC60A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +228,7 @@
 				048C1B3726D5E96600250B01 /* Sources */,
 				048C1B3826D5E96600250B01 /* Frameworks */,
 				048C1B3926D5E96600250B01 /* Resources */,
+				E67E82D0A183E5D3EEE9CB07 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +289,7 @@
 			files = (
 				048C1B4E26D5EA2900250B01 /* .gitignore in Resources */,
 				048C1B2A26D5E96600250B01 /* LaunchScreen.storyboard in Resources */,
+				048C1B5626D87CD100250B01 /* GoogleService-Info.plist in Resources */,
 				048C1B2726D5E96600250B01 /* Assets.xcassets in Resources */,
 				048C1B2526D5E96200250B01 /* Main.storyboard in Resources */,
 			);
@@ -370,6 +376,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E66B529BE5C37064D36CC60A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp/Pods-healthapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp/Pods-healthapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthapp/Pods-healthapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E67E82D0A183E5D3EEE9CB07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -565,7 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jackpan.healthapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackpan.sharebadplace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
