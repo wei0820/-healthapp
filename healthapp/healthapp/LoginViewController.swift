@@ -13,7 +13,7 @@ import Firebase
 class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
     @IBOutlet weak var appleLoginButton: UIButton!
     fileprivate var currentNonce: String?
-
+    let notificationManager : NotificationManager = NotificationManager()
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
 
@@ -25,16 +25,17 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
 
     }
     
+        
+    
     
     @IBAction func guestAction(_ sender: Any) {
     
-        Auth.auth().signInAnonymously { result, errror in
+        Auth.auth().signInAnonymously { [self] result, errror in
             if let error  = errror{ return }
             guard let user = result?.user else {return}
             let isGuest = user.isAnonymous
             let uid = user.uid
-            
-            
+            self.notificationManager.createNotification()
             
         }
         
