@@ -25,6 +25,13 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
 
     }
     
+    func setJump(type:String){
+         
+         if let controller = storyboard?.instantiateViewController(withIdentifier: type) {
+                    present(controller, animated: true, completion: nil)
+                }
+         
+     }
         
     
     
@@ -35,8 +42,8 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
             guard let user = result?.user else {return}
             let isGuest = user.isAnonymous
             let uid = user.uid
-            self.notificationManager.createNotification()
             
+            setJump(type: "home")
         }
         
 

@@ -26,6 +26,7 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
         let center = UNUserNotificationCenter.current()
            center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
            }
+
         // Do any additional setup after loading the view.
     }
     func initLocationManager(){
@@ -95,17 +96,15 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
              geofenceRegion.notifyOnEntry = true
             
              
-             let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-             let mapRegion = MKCoordinateRegion(center: geofenceRegionCenter, span: span)
-             self.mapView.setRegion(mapRegion, animated: true)
-             
-             let regionCircle = MKCircle(center: geofenceRegionCenter, radius: 150
-             )
+            let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+            let mapRegion = MKCoordinateRegion(center: geofenceRegionCenter, span: span)
+            self.mapView.setRegion(mapRegion, animated: true)
+            let regionCircle = MKCircle(center: geofenceRegionCenter, radius: 150)
             self.mapView.addOverlay(regionCircle)
-             self.mapView.showsUserLocation = true;
-             
-             self.locationManager.startMonitoring(for: geofenceRegion)
+            self.mapView.showsUserLocation = true;
+            self.locationManager.startMonitoring(for: geofenceRegion)
             self.locationManager.requestState(for: geofenceRegion)
+        NSLayoutConstraint(item: <#T##Any#>, attribute: <#T##NSLayoutConstraint.Attribute#>, relatedBy: <#T##NSLayoutConstraint.Relation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
     }
     
     
