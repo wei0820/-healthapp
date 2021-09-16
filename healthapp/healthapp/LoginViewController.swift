@@ -22,8 +22,12 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
     }
+    
+    
     
     func setJump(type:String){
          

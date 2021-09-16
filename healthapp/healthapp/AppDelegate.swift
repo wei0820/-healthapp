@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         initUserNotifications()
         FirebaseApp.configure()
+        Analytics.setAnalyticsCollectionEnabled(true)
+
         return true
     }
 

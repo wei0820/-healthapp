@@ -104,7 +104,7 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
             self.mapView.showsUserLocation = true;
             self.locationManager.startMonitoring(for: geofenceRegion)
             self.locationManager.requestState(for: geofenceRegion)
-        NSLayoutConstraint(item: <#T##Any#>, attribute: <#T##NSLayoutConstraint.Attribute#>, relatedBy: <#T##NSLayoutConstraint.Relation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
+
     }
     
     
