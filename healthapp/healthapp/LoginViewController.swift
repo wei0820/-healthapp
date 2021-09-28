@@ -37,11 +37,6 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
                  let HomeVc = stroyboard.instantiateViewController(withIdentifier: "home")
                  let appDelegate = UIApplication.shared.delegate as! AppDelegate;
                  appDelegate.window?.rootViewController = HomeVc
-        } else {
-          // No user is signed in.
-          // ...
-            print("Jack","logout")
-
         }
         
     }
