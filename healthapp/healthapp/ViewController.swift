@@ -8,8 +8,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import JJFloatingActionButton
 
-class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate{
+class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate,JJFloatingActionButtonDelegate{
     let locationManager = CLLocationManager()
     var array = [["test1",25.053621048961702, 121.55708460423104],["test2",25.054729004292337, 121.5598258176044]]
     @IBOutlet weak var mapView: MKMapView!
@@ -26,6 +27,8 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
         let center = UNUserNotificationCenter.current()
            center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
            }
+        setLiftButton(s: "去登入")
+  
 
         // Do any additional setup after loading the view.
     }
@@ -175,9 +178,53 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
 
         }
         
+    func setLiftButton(s: String){
+           let LeftButton = UIBarButtonItem(
+               title:s,
+               style:.plain,
+               target:self,
+               action:#selector(ViewController.liftAction))
+           // 加到導覽列中
+           self.navigationItem.leftBarButtonItem = LeftButton
+       }
+       @objc func liftAction() {
+        
+        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "login")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
+        appDelegate.window?.rootViewController = HomeVc
+           
+       }
+        
+    func setRiButton(s: String){
+           let rightButton = UIBarButtonItem(
+               title:s,
+               style:.plain,
+               target:self,
+               action:#selector(ViewController.RightAction))
+           // 加到導覽列中
+        self.navigationItem.rightBarButtonItem = rightButton
+       }
+       @objc func RightAction() {
+        
+       }
 
+
+    
+    func setFloatingAction(){
+
+        let actionButton = JJFloatingActionButton()
+        actionButton.addItem(title: "item 1", image: UIImage(named: "First")?.withRenderingMode(.alwaysTemplate)) { item in
+          // do something
+            item.titlePosition = .bottom
+            
+        }
+
+        view.addSubview(actionButton)
         
-        //MARK - MKMapViewDelegate
+    }
+    func floatingActionButtonDidOpen(_ button: JJFloatingActionButton) {
         
+    }
 }
 

@@ -30,9 +30,6 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
     func checkLoginState(){
         if Auth.auth().currentUser != nil {
           // User is signed in.
-          // ...
-            print("Jack","login")
-            
                  let stroyboard = UIStoryboard(name: "Main", bundle: nil);
                  let HomeVc = stroyboard.instantiateViewController(withIdentifier: "home")
                  let appDelegate = UIApplication.shared.delegate as! AppDelegate;

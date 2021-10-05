@@ -17,6 +17,8 @@ target 'healthapp' do
   end
 pod 'Firebase/Auth'
 pod 'Firebase/Crashlytics'
+    pod 'JJFloatingActionButton'
+pod 'Firebase/Database'
 
 pod 'Firebase/Analytics'
 end

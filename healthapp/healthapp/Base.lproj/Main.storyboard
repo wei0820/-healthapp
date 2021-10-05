@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dGZ-8s-VNX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="euq-Yj-h8q">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="34v-P0-ioe">
             <objects>
-                <viewController id="dGZ-8s-VNX" customClass="LoginViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="dGZ-8s-VNX" customClass="LoginViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jIr-gJ-Obs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="-796.92307692307691" y="181.99052132701422"/>
         </scene>
-        <!--View Controller-->
+        <!--地圖-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="home" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,18 +70,34 @@
                         <constraints>
                             <constraint firstItem="g5p-VN-3mZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0gh-Lx-hmf"/>
                             <constraint firstItem="g5p-VN-3mZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2oq-Zu-FFo"/>
-                            <constraint firstItem="g5p-VN-3mZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A8p-P4-TVU"/>
                             <constraint firstItem="g5p-VN-3mZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cgA-cl-ShA"/>
+                            <constraint firstItem="g5p-VN-3mZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qtX-Ye-hyq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FVy-YN-G9y"/>
+                    <navigationItem key="navigationItem" title="地圖" id="Swu-kd-Jkp"/>
                     <connections>
                         <outlet property="mapView" destination="g5p-VN-3mZ" id="hXt-bh-tNh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="-468.4729064039409"/>
+            <point key="canvasLocation" x="407" y="-661"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NPz-LH-1kl">
+            <objects>
+                <viewController id="xaZ-au-xmj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZ3-Tz-L1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BiR-Fc-lps"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1tH-lb-FxJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmF-bS-5ee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="-459"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EFK-br-2lF">
@@ -94,7 +110,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hl8-xn-yDM"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K9U-NN-G8e"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZB-eF-0j9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
