@@ -23,6 +23,10 @@ struct DateItem {
     var unlike : String
     var usermessage : String
     var key : String
+    var url_1 :String
+    var url_2 :String
+    var url_3 :String
+
 
     init(snapshot: DataSnapshot) {
         let snapshotValue: [String: AnyObject] = snapshot.value as! [String: AnyObject]
@@ -37,6 +41,10 @@ struct DateItem {
         self.unlike = snapshotValue["unlike"] as! String
         self.usermessage = snapshotValue["usermessage"] as! String
         self.key = snapshotValue["key"] as! String
+        self.url_1 = snapshotValue["url_1"] as! String
+        self.url_2 = snapshotValue["url_2"] as! String
+        self.url_3 = snapshotValue["url_3"] as! String
+
 
 
     }

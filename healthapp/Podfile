@@ -19,6 +19,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Crashlytics'
     pod 'JJFloatingActionButton'
 pod 'Firebase/Database'
+pod 'AARatingBar'
 
 pod 'Firebase/Analytics'
 end

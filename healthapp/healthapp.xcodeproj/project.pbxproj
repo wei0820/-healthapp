@@ -10,6 +10,7 @@
 		0483827B270ACC8100164D24 /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483827A270ACC8100164D24 /* FirebaseDatabaseManager.swift */; };
 		0483827D270AFEA000164D24 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483827C270AFEA000164D24 /* DateManager.swift */; };
 		0483827F270BF05A00164D24 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483827E270BF05A00164D24 /* DateItem.swift */; };
+		04838281270C3C8B00164D24 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04838280270C3C8B00164D24 /* AddDateViewController.swift */; };
 		048C1B1E26D5E96200250B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B1D26D5E96200250B01 /* AppDelegate.swift */; };
 		048C1B2226D5E96200250B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B2126D5E96200250B01 /* ViewController.swift */; };
 		048C1B2526D5E96200250B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048C1B2326D5E96200250B01 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		0483827A270ACC8100164D24 /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
 		0483827C270AFEA000164D24 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		0483827E270BF05A00164D24 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
+		04838280270C3C8B00164D24 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
 		048C1B1A26D5E96200250B01 /* healthapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048C1B1D26D5E96200250B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048C1B2126D5E96200250B01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				0483827A270ACC8100164D24 /* FirebaseDatabaseManager.swift */,
 				0483827C270AFEA000164D24 /* DateManager.swift */,
 				0483827E270BF05A00164D24 /* DateItem.swift */,
+				04838280270C3C8B00164D24 /* AddDateViewController.swift */,
 			);
 			path = healthapp;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				0483827B270ACC8100164D24 /* FirebaseDatabaseManager.swift in Sources */,
 				048C1B5C26D8DBCF00250B01 /* MemberCenter.swift in Sources */,
 				0483827F270BF05A00164D24 /* DateItem.swift in Sources */,
+				04838281270C3C8B00164D24 /* AddDateViewController.swift in Sources */,
 				048C1B1E26D5E96200250B01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

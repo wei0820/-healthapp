@@ -190,7 +190,7 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
        @objc func liftAction() {
         
         let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "login")
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "adddate")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate;
         appDelegate.window?.rootViewController = HomeVc
            
