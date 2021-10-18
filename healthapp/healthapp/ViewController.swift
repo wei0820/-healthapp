@@ -28,6 +28,7 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
            center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
            }
         setLiftButton(s: "去登入")
+        setRightButton(s: "新增")
   
 
         // Do any additional setup after loading the view.
@@ -206,11 +207,28 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
         self.navigationItem.rightBarButtonItem = rightButton
        }
        @objc func RightAction() {
+  
         
        }
 
-
-    
+    func setRightButton(s: String){
+           let RightButton = UIBarButtonItem(
+               title:s,
+               style:.plain,
+               target:self,
+               action:#selector(ViewController.rightAction))
+           // 加到導覽列中
+           self.navigationItem.rightBarButtonItem = RightButton
+       }
+       @objc func rightAction() {
+        
+        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "adddate")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
+        appDelegate.window?.rootViewController = HomeVc
+           
+       }
+        
     func setFloatingAction(){
 
         let actionButton = JJFloatingActionButton()
