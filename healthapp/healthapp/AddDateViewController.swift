@@ -26,7 +26,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     
     @IBOutlet weak var imageName_3: UILabel!
     
-    @IBOutlet weak var ratingBar: AARatingBar!
+    @IBOutlet weak var scoreTF: UILabel!
+    @IBOutlet weak var scoreStepper: UIStepper!
     
     @IBOutlet weak var pickerView: UIPickerView!
     let locationManager:CLLocationManager = CLLocationManager()
@@ -181,12 +182,6 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     }
     
     
-    func addImage(){
-        
-    }
-
-
-
     func setAlert(){
         
         let controller = UIAlertController(title: "訊息通知", message:"您的發文已經發布！！", preferredStyle: .alert)
