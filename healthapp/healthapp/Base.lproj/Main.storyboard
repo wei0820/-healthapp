@@ -147,99 +147,86 @@
                                 </subviews>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVw-6C-Pae">
-                                <rect key="frame" x="16" y="190" width="382" height="60"/>
+                                <rect key="frame" x="16" y="190" width="382" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Gtt-II-xcQ"/>
+                                    <constraint firstAttribute="height" constant="120" id="Gtt-II-xcQ"/>
                                 </constraints>
                             </pickerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-eK-9nv">
-                                <rect key="frame" x="16" y="258" width="382" height="232"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" verticalCompressionResistancePriority="757" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-eK-9nv">
+                                <rect key="frame" x="16" y="318" width="382" height="218"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-5W-RUW">
-                                        <rect key="frame" x="16" y="0.0" width="350" height="30"/>
+                                        <rect key="frame" x="16" y="0.0" width="350" height="20.333333333333332"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-tV-kO8">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-tV-kO8">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyg-Rr-9wg">
-                                                <rect key="frame" x="50.666666666666657" y="0.0" width="299.33333333333337" height="30"/>
-                                                <state key="normal" title="圖片上傳"/>
-                                                <connections>
-                                                    <action selector="addImage_1:" destination="xaZ-au-xmj" eventType="touchUpInside" id="J7x-A7-6SS"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Vw1-SD-upE">
-                                        <rect key="frame" x="16" y="43" width="350" height="30"/>
+                                        <rect key="frame" x="16" y="33.333333333333314" width="350" height="20.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-xd-GFs">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-xd-GFs">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7D-4N-aW9">
-                                                <rect key="frame" x="50.666666666666657" y="0.0" width="299.33333333333337" height="30"/>
-                                                <state key="normal" title="圖片上傳"/>
-                                                <connections>
-                                                    <action selector="addImgage_2:" destination="xaZ-au-xmj" eventType="touchUpInside" id="qIH-Kg-jaQ"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9kS-xM-JVF">
-                                        <rect key="frame" x="16" y="86" width="350" height="30"/>
+                                        <rect key="frame" x="16" y="66.666666666666686" width="350" height="20.333333333333329"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwK-wG-c1O">
-                                                <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwK-wG-c1O">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-UH-Abd">
-                                                <rect key="frame" x="50.666666666666657" y="0.0" width="299.33333333333337" height="30"/>
-                                                <state key="normal" title="圖片上傳"/>
-                                                <connections>
-                                                    <action selector="addImage_3:" destination="xaZ-au-xmj" eventType="touchUpInside" id="yQ5-Ib-ixJ"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJu-Rd-0WY" customClass="AARatingBar" customModule="AARatingBar">
-                                        <rect key="frame" x="124" y="129" width="134" height="60"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="JJu-Rd-0WY" secondAttribute="height" multiplier="67:30" id="Cvd-Rx-Smq"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" systemColor="systemBlueColor"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eir-yN-1Ft">
-                                        <rect key="frame" x="160" y="202" width="62" height="30"/>
-                                        <state key="normal" title="發表文章"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyg-Rr-9wg">
+                                        <rect key="frame" x="160" y="100" width="62" height="30"/>
+                                        <state key="normal" title="圖片上傳"/>
                                         <connections>
-                                            <action selector="sendButton:" destination="xaZ-au-xmj" eventType="touchUpInside" id="fKP-Ab-HEn"/>
+                                            <action selector="addImage_1:" destination="xaZ-au-xmj" eventType="touchUpInside" id="J7x-A7-6SS"/>
                                         </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNH-7T-hUB">
+                                        <rect key="frame" x="16" y="143" width="350" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="評分:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoy-de-7qD">
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFL-Gv-uaK">
+                                                <rect key="frame" x="39.333333333333329" y="0.0" width="216.66666666666669" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Cd-6l-7TF">
+                                                <rect key="frame" x="256" y="0.0" width="94" height="32"/>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eir-yN-1Ft">
+                                        <rect key="frame" x="160" y="188" width="62" height="30"/>
+                                        <state key="normal" title="發表文章"/>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Vw1-SD-upE" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="OUF-5E-NQs"/>
+                                    <constraint firstAttribute="trailing" secondItem="BNH-7T-hUB" secondAttribute="trailing" constant="16" id="ZIX-tT-Er7"/>
                                     <constraint firstAttribute="trailing" secondItem="d2d-5W-RUW" secondAttribute="trailing" constant="16" id="dly-ee-q8x"/>
                                     <constraint firstItem="d2d-5W-RUW" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="kGh-v6-gHD"/>
                                     <constraint firstAttribute="trailing" secondItem="9kS-xM-JVF" secondAttribute="trailing" constant="16" id="py7-oA-Du2"/>
+                                    <constraint firstItem="BNH-7T-hUB" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="rtt-tZ-1Oh"/>
                                     <constraint firstItem="9kS-xM-JVF" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="wRK-Uc-rRe"/>
                                     <constraint firstAttribute="trailing" secondItem="Vw1-SD-upE" secondAttribute="trailing" constant="16" id="zpT-wN-tyb"/>
                                 </constraints>
@@ -269,17 +256,12 @@
                     <connections>
                         <outlet property="addTF" destination="2OF-48-Q8K" id="cN4-8b-cBQ"/>
                         <outlet property="detailTF" destination="LDv-wX-q0p" id="9Ih-t5-YYf"/>
-                        <outlet property="imageName_1" destination="pHS-tV-kO8" id="EGt-q4-xHA"/>
-                        <outlet property="imageName_2" destination="kuZ-xd-GFs" id="wBW-Nt-ptd"/>
-                        <outlet property="imageName_3" destination="WwK-wG-c1O" id="gEW-eR-ERh"/>
                         <outlet property="nameTF" destination="kaa-g9-7gq" id="Ydc-pj-vvZ"/>
-                        <outlet property="pickerView" destination="AVw-6C-Pae" id="7OF-xR-DEd"/>
-                        <outlet property="ratingBar" destination="JJu-Rd-0WY" id="Y0y-MB-eOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmF-bS-5ee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176.8115942028987" y="-460.59782608695656"/>
+            <point key="canvasLocation" x="1176.056338028169" y="-460.76134699853583"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EFK-br-2lF">
@@ -304,9 +286,6 @@
         <image name="applesign" width="848" height="152"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

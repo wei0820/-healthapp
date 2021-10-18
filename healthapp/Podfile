@@ -20,6 +20,8 @@ pod 'Firebase/Crashlytics'
     pod 'JJFloatingActionButton'
 pod 'Firebase/Database'
 pod 'AARatingBar'
+pod 'CLImagePickerTool'
 
+ pod 'Firebase/Storage'	
 pod 'Firebase/Analytics'
 end
