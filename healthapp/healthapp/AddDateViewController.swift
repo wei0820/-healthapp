@@ -11,6 +11,7 @@ import CoreLocation
 import FirebaseStorage
 import FirebaseDatabase
 import CLImagePickerTool
+import Firebase
 
 class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     
@@ -22,9 +23,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     
     @IBOutlet weak var imageName_1: UILabel!
     
-    @IBOutlet weak var imageName_2: UILabel!
     
-    @IBOutlet weak var imageName_3: UILabel!
     
     @IBOutlet weak var scoreTF: UILabel!
     @IBOutlet weak var scoreStepper: UIStepper!
@@ -34,13 +33,39 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     var addStr = ""
     var lat : Double = 0.0
     var lon : Double = 0.0
-    
+    var photoarray: Array<String> = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         getUserLoction()
+        addStepper()
 
         
 
+    }
+    func addStepper(){
+        // 建立一個 UIStepper
+        // UIStepper 預設值
+        scoreTF.text = "100"
+        scoreStepper.value = 100
+               
+        // UIStepper 最小值
+        scoreStepper.minimumValue = 0
+               
+        // UIStepper 最大值
+        scoreStepper.maximumValue = 100
+        scoreStepper.stepValue = 1
+        scoreStepper.autorepeat = true
+        scoreStepper.addTarget(self, action: #selector(onStepperChange), for: .valueChanged)
+        
+        
+        
+    }
+    
+    
+    @objc func onStepperChange() {
+        // 將 UILabel 的值設置為 UIStepper 目前的值
+        scoreTF.text = String(Int(scoreStepper.value))
     }
     func getUserLoction(){
         
@@ -148,7 +173,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
              let imageFromLibAction = UIAlertAction(title: "照片圖庫", style: .default) { (Void) in
                  
                  // 判斷是否可以從照片圖庫取得照片來源
-                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                      
                      // 如果可以，指定 UIImagePickerController 的照片來源為 照片圖庫 (.photoLibrary)，並 present UIImagePickerController
                      imagePickerController.sourceType = .photoLibrary
@@ -196,20 +221,23 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
 extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-                var selectedImageFromPicker: UIImage?
-
-
+        var selectedImageFromPicker: UIImage?
+    
          let image = info[.originalImage] as? UIImage
         selectedImageFromPicker = image
         // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
               let uniqueString = NSUUID().uuidString
-//        let useid :String = userDefaults.string(forKey: "userID") as! String
+        var useid :String = ""
+        if let user = Auth.auth().currentUser {
+            useid = Auth.auth().currentUser!.uid
+        } else {
+            useid = "222222"
+        }
         
-
               // 當判斷有 selectedImage 時，我們會在 if 判斷式裡將圖片上傳
               if let selectedImage = selectedImageFromPicker {
                   
-                  let storageRef = Storage.storage().reference().child("").child("\(uniqueString).png")
+                  let storageRef = Storage.storage().reference().child(useid).child("\(uniqueString).png")
                   
                   if let uploadData = selectedImage.pngData() {
                       // 這行就是 FirebaseStroge 關鍵的存取方法。
@@ -223,18 +251,20 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
                     
                           
                           // 連結取得方式就是：data?.downloadURL()?.absoluteString。
-                          storageRef.downloadURL { (url
+                        storageRef.downloadURL { [self] (url
                               , error) in
                               guard let downloadUrl = url else{
                                  return
                               }
-//                            self.photoarray.append(downloadUrl.absoluteString)
-//                            if(self.photoarray.count != 0 ){
-//                                self.responseTv.text = "已上傳圖片數量:" + String(self.photoarray.count)
-//                                self.closeKeyBoard()
-//                                self.add_btn.isHidden = false
-//
-//                            }
+                            self.photoarray.append(downloadUrl.absoluteString)
+                            if(self.photoarray.count != 0 ){
+                                self.imageName_1.text = "已上傳圖片數量:" + String(self.photoarray.count)
+
+                            
+
+                         
+
+                            }
                          
                             
 

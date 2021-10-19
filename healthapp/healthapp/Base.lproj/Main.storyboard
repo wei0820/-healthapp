@@ -153,34 +153,12 @@
                                 </constraints>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" verticalCompressionResistancePriority="757" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-eK-9nv">
-                                <rect key="frame" x="16" y="318" width="343" height="218.5"/>
+                                <rect key="frame" x="16" y="318" width="343" height="151.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-5W-RUW">
                                         <rect key="frame" x="16" y="0.0" width="311" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-tV-kO8">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Vw1-SD-upE">
-                                        <rect key="frame" x="16" y="33.5" width="311" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuZ-xd-GFs">
-                                                <rect key="frame" x="0.0" y="0.0" width="311" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9kS-xM-JVF">
-                                        <rect key="frame" x="16" y="67" width="311" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="圖片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwK-wG-c1O">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="已上傳圖片:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-tV-kO8">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -189,23 +167,23 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyg-Rr-9wg">
-                                        <rect key="frame" x="140.5" y="100.5" width="62" height="30"/>
+                                        <rect key="frame" x="140.5" y="33.5" width="62" height="30"/>
                                         <state key="normal" title="圖片上傳"/>
                                         <connections>
                                             <action selector="addImage_1:" destination="xaZ-au-xmj" eventType="touchUpInside" id="J7x-A7-6SS"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNH-7T-hUB">
-                                        <rect key="frame" x="16" y="143.5" width="311" height="32"/>
+                                        <rect key="frame" x="16" y="76.5" width="311" height="32"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="評分:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoy-de-7qD">
-                                                <rect key="frame" x="0.0" y="0.0" width="39.5" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="目前評分:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoy-de-7qD">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFL-Gv-uaK">
-                                                <rect key="frame" x="39.5" y="0.0" width="177.5" height="32"/>
+                                                <rect key="frame" x="74" y="0.0" width="143" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -216,7 +194,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eir-yN-1Ft">
-                                        <rect key="frame" x="140.5" y="188.5" width="62" height="30"/>
+                                        <rect key="frame" x="140.5" y="121.5" width="62" height="30"/>
                                         <state key="normal" title="發表文章"/>
                                         <connections>
                                             <action selector="sendButton:" destination="xaZ-au-xmj" eventType="touchUpInside" id="vcd-C8-Fb0"/>
@@ -224,14 +202,10 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Vw1-SD-upE" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="OUF-5E-NQs"/>
                                     <constraint firstAttribute="trailing" secondItem="BNH-7T-hUB" secondAttribute="trailing" constant="16" id="ZIX-tT-Er7"/>
                                     <constraint firstAttribute="trailing" secondItem="d2d-5W-RUW" secondAttribute="trailing" constant="16" id="dly-ee-q8x"/>
                                     <constraint firstItem="d2d-5W-RUW" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="kGh-v6-gHD"/>
-                                    <constraint firstAttribute="trailing" secondItem="9kS-xM-JVF" secondAttribute="trailing" constant="16" id="py7-oA-Du2"/>
                                     <constraint firstItem="BNH-7T-hUB" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="rtt-tZ-1Oh"/>
-                                    <constraint firstItem="9kS-xM-JVF" firstAttribute="leading" secondItem="g7W-eK-9nv" secondAttribute="leading" constant="16" id="wRK-Uc-rRe"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vw1-SD-upE" secondAttribute="trailing" constant="16" id="zpT-wN-tyb"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -260,8 +234,6 @@
                         <outlet property="addTF" destination="2OF-48-Q8K" id="cN4-8b-cBQ"/>
                         <outlet property="detailTF" destination="LDv-wX-q0p" id="9Ih-t5-YYf"/>
                         <outlet property="imageName_1" destination="pHS-tV-kO8" id="0Ka-vd-Rxu"/>
-                        <outlet property="imageName_2" destination="kuZ-xd-GFs" id="fHz-qB-s9y"/>
-                        <outlet property="imageName_3" destination="WwK-wG-c1O" id="a1J-g3-Dbp"/>
                         <outlet property="nameTF" destination="kaa-g9-7gq" id="Ydc-pj-vvZ"/>
                         <outlet property="pickerView" destination="AVw-6C-Pae" id="RJJ-fk-bRT"/>
                         <outlet property="scoreStepper" destination="6Cd-6l-7TF" id="jhi-xn-sZ2"/>
