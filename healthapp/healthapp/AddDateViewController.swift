@@ -36,7 +36,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     // UIPickerView 改變選擇後執行的動作
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         // 依據元件的 tag 取得 UITextField
-        Toast(text: "選擇了:" + pickerData[row]).show()
+        Toast(text: "選擇了:" + pickerData[row],duration: 0.5).show()
 
     }
     
