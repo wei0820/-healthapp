@@ -13,7 +13,7 @@ import FirebaseDatabase
 import CLImagePickerTool
 import Firebase
 
-class AddDateViewController: UIViewController , CLLocationManagerDelegate{
+class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate{
     
     @IBOutlet weak var nameTF: UITextField!
     
@@ -24,6 +24,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     @IBOutlet weak var imageName_1: UILabel!
     
     
+    @IBOutlet weak var uploadImagButton: UIButton!
     
     @IBOutlet weak var scoreTF: UILabel!
     @IBOutlet weak var scoreStepper: UIStepper!
@@ -34,15 +35,49 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
     var lat : Double = 0.0
     var lon : Double = 0.0
     var photoarray: Array<String> = []
+    var useid :String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let user = Auth.auth().currentUser {
+            useid = Auth.auth().currentUser!.uid
+        } else {
+            useid = "222222"
+        }
+        
         getUserLoction()
         addStepper()
+        setTF()
 
         
 
     }
+    func setTF(){
+        nameTF.placeholder = "請輸入名稱"
+        nameTF.borderStyle = .roundedRect
+        nameTF.clearButtonMode = .whileEditing
+        nameTF.returnKeyType = .done
+        nameTF.delegate  = self
+        
+        
+        addTF.placeholder = "請輸入地址"
+        addTF.borderStyle = .roundedRect
+        addTF.clearButtonMode = .whileEditing
+        addTF.returnKeyType = .done
+        addTF.delegate  = self
+
+        
+        
+        
+        detailTF.placeholder = "請輸入內容"
+        detailTF.borderStyle = .roundedRect
+        detailTF.clearButtonMode = .whileEditing
+        detailTF.returnKeyType = .done
+        detailTF.delegate  = self
+
+    }
+    
     func addStepper(){
         // 建立一個 UIStepper
         // UIStepper 預設值
@@ -199,9 +234,10 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate{
         
     @IBAction func sendButton(_ sender: Any) {
         
-        print("jack",lat)
-        print("jack",lon)
-        
+//
+//
+//        FirebaseDatabaseManager.addData(id: useid, name: <#T##String#>, address: <#T##String#>, lat: lat, lon: lon, like: <#T##Int#>, unlike: <#T##Int#>, usermessage: <#T##String#>, url_1: <#T##String#>, url_2: <#T##String#>, url_3: <#T##String#>)
+//
         
         
     }
@@ -227,13 +263,7 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
         selectedImageFromPicker = image
         // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
               let uniqueString = NSUUID().uuidString
-        var useid :String = ""
-        if let user = Auth.auth().currentUser {
-            useid = Auth.auth().currentUser!.uid
-        } else {
-            useid = "222222"
-        }
-        
+  
               // 當判斷有 selectedImage 時，我們會在 if 判斷式裡將圖片上傳
               if let selectedImage = selectedImageFromPicker {
                   
@@ -259,6 +289,12 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
                             self.photoarray.append(downloadUrl.absoluteString)
                             if(self.photoarray.count != 0 ){
                                 self.imageName_1.text = "已上傳圖片數量:" + String(self.photoarray.count)
+                                
+                                if(self.photoarray.count >= 3 ){
+                                    uploadImagButton.isEnabled = false
+                                    uploadImagButton.setTitle("已達上傳上限", for:.normal)
+                                }
+                            
 
                             
 
@@ -277,4 +313,13 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         dismiss(animated: true, completion: nil)
     }
+    // 按下Return後會反應的事件
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            //利用此方式讓按下Return後會Toogle 鍵盤讓它消失
+            textField.resignFirstResponder()
+            return false
+        }
+     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+         self.view.endEditing(true)
+     }
 }

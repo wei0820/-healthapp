@@ -238,6 +238,7 @@
                         <outlet property="pickerView" destination="AVw-6C-Pae" id="RJJ-fk-bRT"/>
                         <outlet property="scoreStepper" destination="6Cd-6l-7TF" id="jhi-xn-sZ2"/>
                         <outlet property="scoreTF" destination="NFL-Gv-uaK" id="Q6i-av-rnF"/>
+                        <outlet property="uploadImagButton" destination="Oyg-Rr-9wg" id="JB1-tU-S1q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmF-bS-5ee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
