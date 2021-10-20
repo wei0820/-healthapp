@@ -12,7 +12,7 @@ import FirebaseStorage
 import FirebaseDatabase
 import CLImagePickerTool
 import Firebase
-
+import Toaster
 class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -36,7 +36,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     // UIPickerView 改變選擇後執行的動作
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         // 依據元件的 tag 取得 UITextField
-        print("jack",pickerData[row])
+        Toast(text: "選擇了:" + pickerData[row]).show()
+
     }
     
     @IBOutlet weak var nameTF: UITextField!

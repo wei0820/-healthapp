@@ -17,10 +17,11 @@ target 'healthapp' do
   end
 pod 'Firebase/Auth'
 pod 'Firebase/Crashlytics'
-    pod 'JJFloatingActionButton'
+pod 'JJFloatingActionButton'
 pod 'Firebase/Database'
 pod 'AARatingBar'
 pod 'CLImagePickerTool'
+pod 'Toaster'
 
  pod 'Firebase/Storage'	
 pod 'Firebase/Analytics'
