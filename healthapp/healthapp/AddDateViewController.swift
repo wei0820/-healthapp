@@ -13,7 +13,31 @@ import FirebaseDatabase
 import CLImagePickerTool
 import Firebase
 
-class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate{
+class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    // UIPickerViewDataSource 必須實作的方法：
+    // UIPickerView 各列有多少行資料
+    func pickerView(
+        _ pickerView: UIPickerView,
+      numberOfRowsInComponent component: Int) -> Int {
+        // 返回陣列 meals 的成員數量
+        return pickerData.count
+    }
+
+    // UIPickerView 每個選項顯示的資料
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        // 設置為陣列 meals 的第 row 項資料
+        return pickerData[row]
+    }
+
+    // UIPickerView 改變選擇後執行的動作
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        // 依據元件的 tag 取得 UITextField
+        print("jack",pickerData[row])
+    }
     
     @IBOutlet weak var nameTF: UITextField!
     
@@ -37,6 +61,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     var photoarray: Array<String> = []
     var useid :String = ""
 
+    var pickerData: [String] =  ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,10 +75,19 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         getUserLoction()
         addStepper()
         setTF()
+        setPicker()
 
         
 
     }
+    
+    func setPicker(){
+        
+        pickerView.delegate = self
+        pickerView.dataSource  = self
+        
+        }
+    
     func setTF(){
         nameTF.placeholder = "請輸入名稱"
         nameTF.borderStyle = .roundedRect
