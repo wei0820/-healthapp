@@ -62,7 +62,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     var photoarray: Array<String> = []
     var useid :String = ""
 
-    var pickerData: [String] =  ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+    var pickerData: [String] =  ["食", "衣", "住", "行", "育", "樂"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
