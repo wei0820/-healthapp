@@ -29,8 +29,11 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
            }
         setLiftButton(s: "去登入")
         setRightButton(s: "新增")
-  
 
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     func initLocationManager(){

@@ -19,13 +19,15 @@ struct DateItem {
     var lon : Double
     var uuid : String
     var date : String
-    var like : String
-    var unlike : String
+    var like : Int
+    var unlike : Int
     var usermessage : String
     var key : String
     var url_1 :String
     var url_2 :String
     var url_3 :String
+    var type : Int
+    var scroe : Int
 
 
     init(snapshot: DataSnapshot) {
@@ -37,14 +39,15 @@ struct DateItem {
         self.lon = snapshotValue["lon"] as! Double
         self.uuid = snapshotValue["uuid"] as! String
         self.date = snapshotValue["date"] as! String
-        self.like = snapshotValue["like"] as! String
-        self.unlike = snapshotValue["unlike"] as! String
+        self.like = snapshotValue["like"] as! Int
+        self.unlike = snapshotValue["unlike"] as! Int
         self.usermessage = snapshotValue["usermessage"] as! String
         self.key = snapshotValue["key"] as! String
         self.url_1 = snapshotValue["url_1"] as! String
         self.url_2 = snapshotValue["url_2"] as! String
         self.url_3 = snapshotValue["url_3"] as! String
-
+        self.type = snapshotValue["type"] as! Int
+        self.scroe = snapshotValue["scroe"] as! Int
 
 
     }

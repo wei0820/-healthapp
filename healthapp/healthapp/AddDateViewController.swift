@@ -37,6 +37,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         // 依據元件的 tag 取得 UITextField
         Toast(text: "選擇了:" + pickerData[row],duration: 0.5).show()
+        pickerType =  row
 
     }
     
@@ -63,7 +64,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     var useid :String = ""
 
     var pickerData: [String] =  ["食", "衣", "住", "行", "育", "樂"]
-
+    var pickerType  = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,7 +118,9 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     func addStepper(){
         // 建立一個 UIStepper
         // UIStepper 預設值
-        scoreTF.text = "100"
+        
+        FirebaseDatabaseManager.getDataForLabel(label: scoreTF)
+
         scoreStepper.value = 100
                
         // UIStepper 最小值
@@ -270,10 +273,19 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         
     @IBAction func sendButton(_ sender: Any) {
         
-//
-//
-//        FirebaseDatabaseManager.addData(id: useid, name: <#T##String#>, address: <#T##String#>, lat: lat, lon: lon, like: <#T##Int#>, unlike: <#T##Int#>, usermessage: <#T##String#>, url_1: <#T##String#>, url_2: <#T##String#>, url_3: <#T##String#>)
-//
+        var name = nameTF.text!.isEmpty ? "" :  nameTF.text!
+        var address = addTF.text!.isEmpty ?   "": addTF.text!
+        var  usermessage = detailTF.text!.isEmpty ? ""  :  detailTF.text!
+        var url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+        var url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
+        var url_3 = photoarray[2].isEmpty ? "" :   photoarray[2]
+   
+
+        
+
+
+        FirebaseDatabaseManager.addData(id: useid, name: name, address: address, lat: lat, lon: lon, like: 0, unlike: 0, usermessage: usermessage, url_1: url_1, url_2: url_2, url_3: url_3, type: pickerType, scroe: Int(scoreStepper.value))
+
         
         
     }
