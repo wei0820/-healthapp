@@ -245,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="1176.056338028169" y="-460.76134699853583"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Page View Controller-->
         <scene sceneID="7te-fN-vdv">
             <objects>
-                <viewController id="Y9Q-9q-z1E" sceneMemberID="viewController">
+                <viewController id="Y9Q-9q-z1E" customClass="SelectPageViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u4q-aA-ALX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
