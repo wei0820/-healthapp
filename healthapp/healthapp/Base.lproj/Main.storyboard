@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g5p-VN-3mZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -271,11 +271,13 @@
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR5-P4-nnw">
                                                         <rect key="frame" x="139.33333333333334" y="0.0" width="274.66666666666663" height="150"/>
                                                         <state key="normal" title="進入"/>
+                                                        <connections>
+                                                            <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="eRj-f4-17y"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="BNN-2j-DkA"/>
                                             <constraint firstItem="psI-dW-Ham" firstAttribute="leading" secondItem="SzZ-v6-faa" secondAttribute="leading" id="Bn5-IB-6KB"/>
@@ -299,6 +301,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-Bs-LJA">
                                                         <rect key="frame" x="149.33333333333334" y="0.0" width="264.66666666666663" height="150"/>
                                                         <state key="normal" title="進入"/>
+                                                        <connections>
+                                                            <action selector="mapTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="QFo-cb-CWg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -311,7 +316,6 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="LPf-xB-om8"/>
                                             <constraint firstAttribute="bottom" secondItem="tC0-c6-c0Y" secondAttribute="bottom" id="Lgg-v0-htU"/>
@@ -340,10 +344,11 @@
                             <constraint firstItem="r30-H5-xn6" firstAttribute="centerX" secondItem="u4q-aA-ALX" secondAttribute="centerX" id="XE6-4L-83a"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EUI-SB-vQQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UzD-SQ-l4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2369.2307692307691" y="-456.39810426540282"/>
+            <point key="canvasLocation" x="-483" y="-1235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EFK-br-2lF">
@@ -356,7 +361,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K9U-NN-G8e"/>
+                        <segue destination="Y9Q-9q-z1E" kind="relationship" relationship="rootViewController" id="G6c-Fu-eKZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ZB-eF-0j9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -368,12 +373,6 @@
         <image name="applesign" width="848" height="152"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

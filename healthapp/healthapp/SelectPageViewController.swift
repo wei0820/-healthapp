@@ -15,5 +15,11 @@ class SelectPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func listTypeButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func mapTypeButtonAction(_ sender: Any) {
+    }
+    
+    
 }
