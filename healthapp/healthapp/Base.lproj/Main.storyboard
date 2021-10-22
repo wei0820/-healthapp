@@ -262,26 +262,17 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="psI-dW-Ham">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnu-FB-e5R">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="150"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="列表模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnu-FB-e5R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="150"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR5-P4-nnw">
-                                                        <rect key="frame" x="111.33333333333334" y="0.0" width="302.66666666666663" height="150"/>
-                                                        <state key="normal" title="Button"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR5-P4-nnw">
+                                                        <rect key="frame" x="139.33333333333334" y="0.0" width="274.66666666666663" height="150"/>
+                                                        <state key="normal" title="進入"/>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="CR5-P4-nnw" firstAttribute="leading" secondItem="nnu-FB-e5R" secondAttribute="trailing" constant="70" id="KOc-kg-Qwb"/>
-                                                    <constraint firstAttribute="bottom" secondItem="nnu-FB-e5R" secondAttribute="bottom" id="etg-ba-Jwr"/>
-                                                    <constraint firstItem="nnu-FB-e5R" firstAttribute="top" secondItem="psI-dW-Ham" secondAttribute="top" id="fXh-Mn-uoa"/>
-                                                    <constraint firstAttribute="bottom" secondItem="CR5-P4-nnw" secondAttribute="bottom" id="hql-OP-9U9"/>
-                                                    <constraint firstAttribute="trailing" secondItem="CR5-P4-nnw" secondAttribute="trailing" id="lGd-nY-jeH"/>
-                                                    <constraint firstItem="CR5-P4-nnw" firstAttribute="top" secondItem="psI-dW-Ham" secondAttribute="top" id="rbA-kU-wep"/>
-                                                    <constraint firstItem="nnu-FB-e5R" firstAttribute="leading" secondItem="psI-dW-Ham" secondAttribute="leading" id="y0E-qT-lZw"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -299,19 +290,18 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="tC0-c6-c0Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-0Z-SZE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="150"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地圖模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-0Z-SZE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="150"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-Bs-LJA">
-                                                        <rect key="frame" x="121.33333333333334" y="0.0" width="292.66666666666663" height="150"/>
-                                                        <state key="normal" title="Button"/>
+                                                        <rect key="frame" x="149.33333333333334" y="0.0" width="264.66666666666663" height="150"/>
+                                                        <state key="normal" title="進入"/>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Nfq-Bs-LJA" firstAttribute="leading" secondItem="gAe-0Z-SZE" secondAttribute="trailing" constant="80" id="34s-in-WBB"/>
                                                     <constraint firstAttribute="trailing" secondItem="Nfq-Bs-LJA" secondAttribute="trailing" id="81S-SL-Lib"/>
                                                     <constraint firstAttribute="bottom" secondItem="Nfq-Bs-LJA" secondAttribute="bottom" id="QQH-o5-IKr"/>
                                                     <constraint firstItem="gAe-0Z-SZE" firstAttribute="leading" secondItem="tC0-c6-c0Y" secondAttribute="leading" id="V4z-DN-Tjq"/>
