@@ -59,7 +59,10 @@ class FirebaseDatabaseManager{
                                let data = DateItem(snapshot: item as! DataSnapshot)
                             
                             print("Jack",data.address)
-                            label.text = String(data.scroe)
+                            print("Jack",data.type)
+                            print("Jack",data.name)
+
+//                            label.text = String(data.scroe)
 
                            }
                            
