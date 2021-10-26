@@ -27,9 +27,7 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
         let center = UNUserNotificationCenter.current()
            center.requestAuthorization(options: [.badge, .alert, .sound]) { (granted, error) in
            }
-        setLiftButton(s: "去登入")
-        setRightButton(s: "新增")
-
+    
         
         
         
@@ -182,55 +180,6 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
 
         }
         
-    func setLiftButton(s: String){
-           let LeftButton = UIBarButtonItem(
-               title:s,
-               style:.plain,
-               target:self,
-               action:#selector(ViewController.liftAction))
-           // 加到導覽列中
-           self.navigationItem.leftBarButtonItem = LeftButton
-       }
-       @objc func liftAction() {
-        
-        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "adddate")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-        appDelegate.window?.rootViewController = HomeVc
-           
-       }
-        
-    func setRiButton(s: String){
-           let rightButton = UIBarButtonItem(
-               title:s,
-               style:.plain,
-               target:self,
-               action:#selector(ViewController.RightAction))
-           // 加到導覽列中
-        self.navigationItem.rightBarButtonItem = rightButton
-       }
-       @objc func RightAction() {
-  
-        
-       }
-
-    func setRightButton(s: String){
-           let RightButton = UIBarButtonItem(
-               title:s,
-               style:.plain,
-               target:self,
-               action:#selector(ViewController.rightAction))
-           // 加到導覽列中
-           self.navigationItem.rightBarButtonItem = RightButton
-       }
-       @objc func rightAction() {
-        
-        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "adddate")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-        appDelegate.window?.rootViewController = HomeVc
-           
-       }
         
     func setFloatingAction(){
 

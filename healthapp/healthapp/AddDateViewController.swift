@@ -301,6 +301,13 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
                    present(controller, animated: true, completion: nil)
     }
     
+    
+    @IBAction func dissViewButton(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
 }
 extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
@@ -370,4 +377,7 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
      override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
          self.view.endEditing(true)
      }
+    
+    
+    
 }

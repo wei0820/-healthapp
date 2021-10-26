@@ -204,6 +204,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-yL-1GC">
                                         <rect key="frame" x="129.66666666666666" y="164.33333333333331" width="123" height="30"/>
                                         <state key="normal" title="先不用！我再想想"/>
+                                        <connections>
+                                            <action selector="dissViewButton:" destination="xaZ-au-xmj" eventType="touchUpInside" id="kkl-E2-aPJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -281,7 +284,7 @@
                                                         <rect key="frame" x="287.33333333333331" y="0.0" width="102.66666666666669" height="150"/>
                                                         <state key="normal" title="進入"/>
                                                         <connections>
-                                                            <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="cLL-c7-Suv"/>
+                                                            <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="6a2-zS-bsJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -319,6 +322,7 @@
                                                         <state key="normal" title="進入"/>
                                                         <connections>
                                                             <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="W2f-kW-PVq"/>
+                                                            <action selector="mapTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="CNe-tg-QbV"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
