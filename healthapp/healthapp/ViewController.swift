@@ -187,7 +187,6 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
         actionButton.addItem(title: "item 1", image: UIImage(named: "First")?.withRenderingMode(.alwaysTemplate)) { item in
           // do something
             item.titlePosition = .bottom
-            
         }
 
         view.addSubview(actionButton)

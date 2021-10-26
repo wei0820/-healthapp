@@ -272,19 +272,38 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         
         
     @IBAction func sendButton(_ sender: Any) {
-        
+        var url_1 = ""
+        var url_2 = ""
+        var url_3 = ""
+
         var name = nameTF.text!.isEmpty ? "" :  nameTF.text!
         var address = addTF.text!.isEmpty ?   "": addTF.text!
         var  usermessage = detailTF.text!.isEmpty ? ""  :  detailTF.text!
-        var url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
-        var url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
-        var url_3 = photoarray[2].isEmpty ? "" :   photoarray[2]
+        var count = photoarray.count
+        switch count {
+        case 1: break
+             url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+        case 2: break
+             url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+             url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
+        case 3: break
+             url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+            url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
+             url_3 = photoarray[2].isEmpty ? "" :   photoarray[2]
+            
+        default: break
+            
+            
+        }
+ 
    
 
         
 
 
         FirebaseDatabaseManager.addData(id: useid, name: name, address: address, lat: lat, lon: lon, like: 0, unlike: 0, usermessage: usermessage, url_1: url_1, url_2: url_2, url_3: url_3, type: pickerType, scroe: Int(scoreStepper.value))
+        
+        setAlert()
 
         
         
@@ -294,7 +313,14 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     func setAlert(){
         
         let controller = UIAlertController(title: "訊息通知", message:"您的發文已經發布！！", preferredStyle: .alert)
-      let okAction = UIAlertAction(title: "好的", style: .default) { (_) in
+      let okAction = UIAlertAction(title: "好的", style: .default) {
+        (_) in
+        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "select")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
+        appDelegate.window?.rootViewController = HomeVc
+        
+        
                    }
                    controller.addAction(okAction)
                 
@@ -304,8 +330,11 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     
     @IBAction func dissViewButton(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
-
+        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "select")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
+        appDelegate.window?.rootViewController = HomeVc
+        
     }
     
 }
