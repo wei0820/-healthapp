@@ -154,7 +154,7 @@
                                 </constraints>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" verticalCompressionResistancePriority="757" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-eK-9nv">
-                                <rect key="frame" x="16" y="318" width="382" height="151.33333333333337"/>
+                                <rect key="frame" x="16" y="318" width="382" height="194.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-5W-RUW">
                                         <rect key="frame" x="16" y="0.0" width="350" height="20.333333333333332"/>
@@ -200,6 +200,10 @@
                                         <connections>
                                             <action selector="sendButton:" destination="xaZ-au-xmj" eventType="touchUpInside" id="vcd-C8-Fb0"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-yL-1GC">
+                                        <rect key="frame" x="129.66666666666666" y="164.33333333333331" width="123" height="30"/>
+                                        <state key="normal" title="先不用！我再想想"/>
                                     </button>
                                 </subviews>
                                 <constraints>
