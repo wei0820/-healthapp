@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -259,80 +260,74 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzZ-v6-faa">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="psI-dW-Ham">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EI5-7a-gzg">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="列表模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnu-FB-e5R">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="150"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mzg-1u-yEn">
+                                                        <rect key="frame" x="0.0" y="3" width="138" height="144.66666666666666"/>
+                                                        <imageReference key="image" image="list.triangle" catalog="system" renderingMode="original"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="列表模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRT-Sf-LqJ">
+                                                        <rect key="frame" x="138" y="0.0" width="138" height="150"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR5-P4-nnw">
-                                                        <rect key="frame" x="139.33333333333334" y="0.0" width="274.66666666666663" height="150"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IB-Ep-dGy">
+                                                        <rect key="frame" x="276" y="0.0" width="138" height="150"/>
                                                         <state key="normal" title="進入"/>
                                                         <connections>
-                                                            <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="eRj-f4-17y"/>
+                                                            <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="cLL-c7-Suv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="BNN-2j-DkA"/>
-                                            <constraint firstItem="psI-dW-Ham" firstAttribute="leading" secondItem="SzZ-v6-faa" secondAttribute="leading" id="Bn5-IB-6KB"/>
-                                            <constraint firstAttribute="bottom" secondItem="psI-dW-Ham" secondAttribute="bottom" id="Dln-h9-qFi"/>
-                                            <constraint firstAttribute="trailing" secondItem="psI-dW-Ham" secondAttribute="trailing" id="VeL-IX-XM8"/>
-                                            <constraint firstItem="psI-dW-Ham" firstAttribute="top" secondItem="SzZ-v6-faa" secondAttribute="top" id="ZPN-hp-ZFX"/>
+                                            <constraint firstItem="EI5-7a-gzg" firstAttribute="leading" secondItem="SzZ-v6-faa" secondAttribute="leading" id="XFe-Nz-ylG"/>
+                                            <constraint firstItem="EI5-7a-gzg" firstAttribute="top" secondItem="SzZ-v6-faa" secondAttribute="top" id="cUL-iY-Idx"/>
+                                            <constraint firstAttribute="trailing" secondItem="EI5-7a-gzg" secondAttribute="trailing" id="qzV-ag-Fbq"/>
+                                            <constraint firstAttribute="bottom" secondItem="EI5-7a-gzg" secondAttribute="bottom" id="yhm-0g-kol"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pga-oi-71o">
                                         <rect key="frame" x="0.0" y="150" width="414" height="150"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="tC0-c6-c0Y">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DJ1-wC-O3T">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地圖模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAe-0Z-SZE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="150"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W1O-IE-RNw">
+                                                        <rect key="frame" x="0.0" y="3" width="138" height="144.66666666666666"/>
+                                                        <imageReference key="image" image="map" catalog="system" symbolScale="small" renderingMode="original"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="列表模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKs-vl-D1U">
+                                                        <rect key="frame" x="138" y="0.0" width="138" height="150"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-Bs-LJA">
-                                                        <rect key="frame" x="149.33333333333334" y="0.0" width="264.66666666666663" height="150"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="700" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702-Mh-Nsf">
+                                                        <rect key="frame" x="276" y="0.0" width="138" height="150"/>
                                                         <state key="normal" title="進入"/>
                                                         <connections>
-                                                            <action selector="mapTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="QFo-cb-CWg"/>
+                                                            <action selector="listTypeButtonAction:" destination="Y9Q-9q-z1E" eventType="touchUpInside" id="W2f-kW-PVq"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Nfq-Bs-LJA" secondAttribute="trailing" id="81S-SL-Lib"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Nfq-Bs-LJA" secondAttribute="bottom" id="QQH-o5-IKr"/>
-                                                    <constraint firstItem="gAe-0Z-SZE" firstAttribute="leading" secondItem="tC0-c6-c0Y" secondAttribute="leading" id="V4z-DN-Tjq"/>
-                                                    <constraint firstItem="Nfq-Bs-LJA" firstAttribute="top" secondItem="tC0-c6-c0Y" secondAttribute="top" id="Wzi-OL-w8O"/>
-                                                    <constraint firstItem="gAe-0Z-SZE" firstAttribute="top" secondItem="tC0-c6-c0Y" secondAttribute="top" id="vaN-Dq-KlB"/>
-                                                    <constraint firstAttribute="bottom" secondItem="gAe-0Z-SZE" secondAttribute="bottom" id="xLf-5M-Aay"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="LPf-xB-om8"/>
-                                            <constraint firstAttribute="bottom" secondItem="tC0-c6-c0Y" secondAttribute="bottom" id="Lgg-v0-htU"/>
-                                            <constraint firstItem="tC0-c6-c0Y" firstAttribute="leading" secondItem="pga-oi-71o" secondAttribute="leading" id="U25-rc-S8t"/>
-                                            <constraint firstItem="tC0-c6-c0Y" firstAttribute="top" secondItem="pga-oi-71o" secondAttribute="top" id="Zt7-3j-OxR"/>
-                                            <constraint firstAttribute="trailing" secondItem="tC0-c6-c0Y" secondAttribute="trailing" id="mpr-pW-qVN"/>
+                                            <constraint firstItem="DJ1-wC-O3T" firstAttribute="leading" secondItem="pga-oi-71o" secondAttribute="leading" id="284-3I-AL3"/>
+                                            <constraint firstAttribute="trailing" secondItem="DJ1-wC-O3T" secondAttribute="trailing" id="5ON-VP-sNi"/>
+                                            <constraint firstItem="DJ1-wC-O3T" firstAttribute="top" secondItem="pga-oi-71o" secondAttribute="top" id="SXZ-Ng-wHv"/>
+                                            <constraint firstAttribute="bottom" secondItem="DJ1-wC-O3T" secondAttribute="bottom" id="o6E-go-7OU"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="SzZ-v6-faa" firstAttribute="top" secondItem="r30-H5-xn6" secondAttribute="top" id="2O4-RJ-gSQ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="WB6-6h-F1I"/>
                                     <constraint firstAttribute="height" constant="300" id="XT6-hF-KgZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="pga-oi-71o" secondAttribute="trailing" id="dwx-Bt-3Xj"/>
-                                    <constraint firstItem="pga-oi-71o" firstAttribute="leading" secondItem="r30-H5-xn6" secondAttribute="leading" id="ijp-Fx-05y"/>
-                                    <constraint firstItem="pga-oi-71o" firstAttribute="top" secondItem="SzZ-v6-faa" secondAttribute="bottom" id="ofK-nr-yx1"/>
-                                    <constraint firstItem="pga-oi-71o" firstAttribute="top" secondItem="SzZ-v6-faa" secondAttribute="bottom" id="tCH-0x-Wr8"/>
+                                    <constraint firstItem="pga-oi-71o" firstAttribute="top" secondItem="r30-H5-xn6" secondAttribute="top" constant="150" id="xJj-jy-7WE"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -371,6 +366,8 @@
     </scenes>
     <resources>
         <image name="applesign" width="848" height="152"/>
+        <image name="list.triangle" catalog="system" width="128" height="91"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
