@@ -23,6 +23,12 @@ class SelectPageViewController: UIViewController {
     }
     
     @IBAction func mapTypeButtonAction(_ sender: Any) {
+        
+        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "home")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
+        appDelegate.window?.rootViewController = HomeVc
+        
     }
     
     
@@ -38,7 +44,7 @@ func setLiftButton(s: String){
    @objc func liftAction() {
     
     let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-    let HomeVc = stroyboard.instantiateViewController(withIdentifier: "adddate")
+    let HomeVc = stroyboard.instantiateViewController(withIdentifier: "login")
     let appDelegate = UIApplication.shared.delegate as! AppDelegate;
     appDelegate.window?.rootViewController = HomeVc
        
