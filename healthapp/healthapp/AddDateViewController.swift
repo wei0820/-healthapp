@@ -13,6 +13,8 @@ import FirebaseDatabase
 import CLImagePickerTool
 import Firebase
 import Toaster
+import MLKit
+
 class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -78,6 +80,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         addStepper()
         setTF()
         setPicker()
+
 
         
 
@@ -301,7 +304,19 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
             
             
         }
- 
+        var languageId = LanguageIdentification.languageIdentification()
+        languageId.identifyLanguage(for: name) { (languageTag, error) in
+            if let error = error {
+              print("jack","Failed with error: \(error)")
+              return
+            }
+            print("jack","Identified Language: \(self.displayName(for:languageTag!))")
+            if let languageCode = languageTag, languageTag != "Chinese" {
+               print("jack","Language: \(languageCode)")
+             } else {
+               print("jack","No language was identified")
+             }
+          }
    
 
         
@@ -314,7 +329,12 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         
         
     }
-    
+    func displayName(for languageTag: String) -> String {
+      if languageTag == IdentifiedLanguage.undetermined {
+        return "Undetermined Language"
+      }
+      return Locale.current.localizedString(forLanguageCode: languageTag)!
+    }
     
     func setAlert(){
         

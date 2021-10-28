@@ -22,6 +22,7 @@ pod 'Firebase/Database'
 pod 'AARatingBar'
 pod 'CLImagePickerTool'
 pod 'Toaster'
+pod 'GoogleMLKit/LanguageID', '2.3.0'
 
  pod 'Firebase/Storage'	
 pod 'Firebase/Analytics'
