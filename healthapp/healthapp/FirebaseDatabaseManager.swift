@@ -62,8 +62,6 @@ class FirebaseDatabaseManager{
                             print("Jack",data.type)
                             print("Jack",data.name)
 
-//                            label.text = String(data.scroe)
-
                            }
                            
                            

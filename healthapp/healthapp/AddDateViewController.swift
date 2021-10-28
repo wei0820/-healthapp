@@ -119,9 +119,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         // 建立一個 UIStepper
         // UIStepper 預設值
         
-        FirebaseDatabaseManager.getDataForLabel(label: scoreTF)
-
         scoreStepper.value = 100
+        scoreTF.text = String(Int(scoreStepper.value))
                
         // UIStepper 最小值
         scoreStepper.minimumValue = 0
@@ -281,15 +280,22 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         var  usermessage = detailTF.text!.isEmpty ? ""  :  detailTF.text!
         var count = photoarray.count
         switch count {
-        case 1: break
-             url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
-        case 2: break
-             url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
-             url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
-        case 3: break
-             url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+        case 1:
+            
+            url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+            break
+            
+        case 2:
+            url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
             url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
-             url_3 = photoarray[2].isEmpty ? "" :   photoarray[2]
+            break
+            
+        case 3:
+            url_1 = photoarray[0].isEmpty ? "" :   photoarray[0]
+           url_2 = photoarray[1].isEmpty ? "" :   photoarray[1]
+            url_3 = photoarray[2].isEmpty ? "" :   photoarray[2]
+            break
+          
             
         default: break
             
@@ -330,10 +336,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     
     @IBAction func dissViewButton(_ sender: Any) {
         
-        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "select")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-        appDelegate.window?.rootViewController = HomeVc
+
         
     }
     

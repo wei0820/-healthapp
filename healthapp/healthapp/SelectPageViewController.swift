@@ -20,16 +20,31 @@ class SelectPageViewController: UIViewController {
     }
     
     @IBAction func listTypeButtonAction(_ sender: Any) {
+    
+        jumpViewController(name: "list")
+
     }
     
     @IBAction func mapTypeButtonAction(_ sender: Any) {
+
+        jumpViewController(name: "home")
+        
+    }
+    
+    
+    
+    func jumpViewController(name :String){
+        
+        
         
         let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "home")
+        let HomeVc = stroyboard.instantiateViewController(withIdentifier: name)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate;
         appDelegate.window?.rootViewController = HomeVc
         
     }
+    
+    
     
     
 func setLiftButton(s: String){
@@ -43,10 +58,8 @@ func setLiftButton(s: String){
    }
    @objc func liftAction() {
     
-    let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-    let HomeVc = stroyboard.instantiateViewController(withIdentifier: "login")
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-    appDelegate.window?.rootViewController = HomeVc
+    jumpViewController(name: "login")
+
        
    }
     
@@ -60,11 +73,9 @@ func setRightButton(s: String){
        self.navigationItem.rightBarButtonItem = RightButton
    }
    @objc func rightAction() {
+
     
-    let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-    let HomeVc = stroyboard.instantiateViewController(withIdentifier: "adddate")
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-    appDelegate.window?.rootViewController = HomeVc
+    jumpViewController(name: "adddate")
        
    }
 }
