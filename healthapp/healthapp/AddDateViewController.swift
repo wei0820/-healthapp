@@ -14,6 +14,7 @@ import CLImagePickerTool
 import Firebase
 import Toaster
 import MLKit
+import MLKitTranslate
 
 class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -67,6 +68,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
 
     var pickerData: [String] =  ["食", "衣", "住", "行", "育", "樂"]
     var pickerType  = 0
+    var translator: Translator!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -317,11 +320,28 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
                print("jack","No language was identified")
              }
           }
-   
-
+    
         
+   
+        let options = TranslatorOptions(sourceLanguage: .english, targetLanguage: .chinese)
+           translator = Translator.translator(options: options)
+        let conditions = ModelDownloadConditions(
+            allowsCellularAccess: false,
+            allowsBackgroundDownloading: true
+        )
+        translator.downloadModelIfNeeded(with: conditions) { error in
+            guard error == nil else { return }
+
+            // Model downloaded successfully. Okay to start translating.
+        }
 
 
+        translator.translate(name) { translatedText, error in
+                guard error == nil, let translatedText = translatedText else { return }
+                print("jack_翻譯",translatedText)
+
+                // Translation succeeded.
+            }
         FirebaseDatabaseManager.addData(id: useid, name: name, address: address, lat: lat, lon: lon, like: 0, unlike: 0, usermessage: usermessage, url_1: url_1, url_2: url_2, url_3: url_3, type: pickerType, scroe: Int(scoreStepper.value))
         
         setAlert()

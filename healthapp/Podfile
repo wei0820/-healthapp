@@ -15,6 +15,7 @@ target 'healthapp' do
   target 'healthappUITests' do
     # Pods for testing
   end
+pod 'GoogleMLKit/Translate', '2.3.0'
 pod 'Firebase/Auth'
 pod 'Firebase/Crashlytics'
 pod 'JJFloatingActionButton'

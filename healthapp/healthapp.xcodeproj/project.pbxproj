@@ -222,6 +222,7 @@
 				048C1B1826D5E96200250B01 /* Resources */,
 				E66B529BE5C37064D36CC60A /* [CP] Embed Pods Frameworks */,
 				048C1B9626F1C14000250B01 /* ShellScript */,
+				E6DBBBBC29FEF33AF6A63242 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +261,7 @@
 				048C1B3826D5E96600250B01 /* Frameworks */,
 				048C1B3926D5E96600250B01 /* Resources */,
 				E67E82D0A183E5D3EEE9CB07 /* [CP] Embed Pods Frameworks */,
+				A2A6934F6C42D433782F658A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -429,6 +431,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A2A6934F6C42D433782F658A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E66B529BE5C37064D36CC60A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +480,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthapp-healthappUITests/Pods-healthapp-healthappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6DBBBBC29FEF33AF6A63242 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp/Pods-healthapp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-healthapp/Pods-healthapp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthapp/Pods-healthapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
