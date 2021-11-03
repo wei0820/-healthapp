@@ -49,7 +49,7 @@ class FirebaseDatabaseManager{
 
     }
     
-    static func  getDataForLabel(label : UILabel){
+    static func  getDataForLabel(){
         let reference: DatabaseReference! = Database.database().reference().child("SharePlace").child("SharePlace")
                    
                    reference.queryOrderedByKey().observe(.value, with: { snapshot in
