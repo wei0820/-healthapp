@@ -34,7 +34,6 @@ class MLKitManager{
                 guard error == nil, let translatedText = translatedText else { return }
                 print("jack_翻譯",translatedText)
 
-                // Translation succeeded.
             }
     }
     

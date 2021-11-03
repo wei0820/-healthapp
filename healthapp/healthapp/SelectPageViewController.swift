@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Firebase
+import Toaster
 class SelectPageViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -73,9 +74,16 @@ func setRightButton(s: String){
        self.navigationItem.rightBarButtonItem = RightButton
    }
    @objc func rightAction() {
+    
+    
+    if  Auth.auth().currentUser != nil{
+        jumpViewController(name: "adddate")
+    }else{
+        Toast(text: "請先登入後再使用!!",duration: 0.5).show()
+
+    }
 
     
-    jumpViewController(name: "adddate")
        
    }
 }

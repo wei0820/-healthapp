@@ -72,10 +72,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let user = Auth.auth().currentUser {
+        if  Auth.auth().currentUser != nil{
             useid = Auth.auth().currentUser!.uid
-        } else {
-            useid = "222222"
         }
         
         getUserLoction()
