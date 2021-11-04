@@ -18,14 +18,16 @@ class ListViewController: UIViewController , UITableViewDelegate, UITableViewDat
       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
           let cellIdentifier = "Cell"
           let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,for:indexPath)
-        cell.textLabel?.text =  dateItem[indexPath.row].address
-        cell.detailTextLabel?.text =   dateItem[indexPath.row].date
+        cell.textLabel?.text =  "名稱:"  + dateItem[indexPath.row].name
+        cell.detailTextLabel?.text =   "地址:"  +  dateItem[indexPath.row].address
           return cell
           
       }
 
     @IBOutlet weak var tableview: UITableView!
     var dateItem: [DateItem] = [DateItem]()
+    var myIndex : IndexPath = IndexPath()
+
     var imageArr = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +51,6 @@ class ListViewController: UIViewController , UITableViewDelegate, UITableViewDat
                              for item in snapshot.children {
             
                                  let data = DateItem(snapshot: item as! DataSnapshot)
-                                print("jack",data.address)
                                 self.dateItem.append(data)
                                  
                              }
@@ -59,6 +60,41 @@ class ListViewController: UIViewController , UITableViewDelegate, UITableViewDat
                          }
                          
                      })
+        }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            tableView.deselectRow(
+//                at: indexPath, animated: true)
+        myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
+
+            performSegue(withIdentifier: "detail", sender: nil)
+           
+        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let controller = segue.destination as? DetaiViewController
+        let indexPath = tableview.indexPathForSelectedRow
+        controller?.id =  dateItem[indexPath!.row].id
+        controller?.name =  dateItem[indexPath!.row].name
+        controller?.address =  dateItem[indexPath!.row].address
+        controller?.lat =  dateItem[indexPath!.row].lat
+        controller?.lon =  dateItem[indexPath!.row].lon
+        controller?.uuid =  dateItem[indexPath!.row].uuid
+        controller?.date =  dateItem[indexPath!.row].date
+        controller?.like =  dateItem[indexPath!.row].like
+        controller?.unlike  = dateItem[indexPath!.row].unlike
+        controller?.usermessage = dateItem[indexPath!.row].usermessage
+        controller?.key =  dateItem[indexPath!.row].key
+        controller?.url_1 = dateItem[indexPath!.row].url_1
+        controller?.url_2 = dateItem[indexPath!.row].url_2
+        controller?.url_3 = dateItem[indexPath!.row].url_3
+        controller?.type = dateItem[indexPath!.row].type
+        controller?.scroe = dateItem[indexPath!.row].scroe
+
+        
+        
+            
         }
 
 }

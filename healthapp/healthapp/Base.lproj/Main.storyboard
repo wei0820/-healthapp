@@ -359,6 +359,33 @@
             </objects>
             <point key="canvasLocation" x="-483" y="-1235"/>
         </scene>
+        <!--Detai View Controller-->
+        <scene sceneID="LvN-9a-2gJ">
+            <objects>
+                <viewController id="L49-Fe-oMR" customClass="DetaiViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t49-EK-TP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lF-Xa-iee">
+                                <rect key="frame" x="186" y="198" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7V-f3-wAV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="trrrr" destination="7lF-Xa-iee" id="3ee-ri-t35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Usm-qn-b2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="-2144"/>
+        </scene>
         <!--List View Controller-->
         <scene sceneID="LAF-9x-buo">
             <objects>
@@ -411,6 +438,7 @@
                     </view>
                     <connections>
                         <outlet property="tableview" destination="QcS-Lt-mib" id="NJw-Ie-C3j"/>
+                        <segue destination="L49-Fe-oMR" kind="showDetail" identifier="detail" id="xxL-8x-pBX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoL-1z-HKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
